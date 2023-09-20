@@ -1,21 +1,23 @@
 "use client";
+import { Icons } from '@/components';
 import { useState } from 'react';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
+  function handleLogin(){
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-semibold mb-6">Login</h2>
+        <h2 className="text-2xl font-semibold mb-6 text-center">Login</h2>
         <form onSubmit={handleLogin}>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-600 font-semibold">
-              Email
+            <label htmlFor="email" className="text-gray-600 font-semibold flex no-wrap gap-2">
+              <Icons name='MdMailOutline' />
+              Email:
             </label>
             <input
               type="email"
@@ -27,9 +29,10 @@ export default function Login() {
               required
             />
           </div>
-          <div className="mb-4">
-            <label htmlFor="password" className="block text-gray-600 font-semibold">
-              Senha
+          <div className="mb-5">
+            <label htmlFor="password" className="text-gray-600 font-semibold flex no-wrap gap-2">
+            <Icons name='BsKey' />
+              Senha:
             </label>
             <input
               type="password"
@@ -41,12 +44,12 @@ export default function Login() {
               required
             />
           </div>
-          <button
-            type="submit"
-            className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300"
-          >
-            Entrar
-          </button>
+            <button
+              type="submit"
+              className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-primary-100 transition duration-300 flex w-full justify-center items-center mt-2"
+            >
+              Entrar
+            </button>
         </form>
       </div>
     </div>
