@@ -1,5 +1,5 @@
 "use client";
-import { Icons } from '@/components';
+import { Icons } from '@/components/Icons';
 import { useState } from 'react';
 
 export default function Login() {
