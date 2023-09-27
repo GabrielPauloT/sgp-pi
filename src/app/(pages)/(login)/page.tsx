@@ -1,13 +1,19 @@
 "use client";
 import { Icons } from '@/components/Icons';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
+import Cookie from "js-cookie";
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  function handleLogin(){
-  };
+  const router = useRouter();
+
+  function handleLogin() {
+    Cookie.set("auth_token", "testekjsandlkansdlkasdm");
+    router.push("/calendario");
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -24,7 +30,7 @@ export default function Login() {
               id="email"
               className="w-full py-2 px-3 border rounded shadow"
               placeholder="Seu email"
-              value={email}
+              // value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
@@ -39,7 +45,7 @@ export default function Login() {
               id="password"
               className="w-full py-2 px-3 border rounded shadow"
               placeholder="Sua senha"
-              value={password}
+              // value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
