@@ -1,6 +1,6 @@
 "use client";
 import { Icons } from '@/components/Icons';
-import { useRouter } from 'next/router';
+import { useRouter } from "next/navigation";
 import { useState } from 'react';
 import Cookie from "js-cookie";
 
@@ -11,8 +11,8 @@ export default function Login() {
   const router = useRouter();
 
   function handleLogin() {
-    Cookie.set("auth_token", "testekjsandlkansdlkasdm");
-    router.push("/calendario");
+    Cookie.set("auth", "testekjsandlkansdlkasdm");
+    router.push("/home");
   }
 
   return (

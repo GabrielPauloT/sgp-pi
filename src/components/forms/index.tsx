@@ -125,18 +125,6 @@ export default function FormStoppage() {
                     {errors.tag && <p className="text-red-500 text-xs italic">Campo obrigatório</p>}
                 </div>
                     <div>
-                        <label htmlFor="descricao" className="block text-gray-700 font-bold">Descrição:</label>
-                        <input
-                            type="text"
-                            id="descricao"
-                            {...register('descricao', { required: true })}
-                            className="w-full border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            value={data.descricao}
-                            onChange={(e) => setData({ ...data, descricao: e.target.value })}
-                        />
-                        {errors.descricao && <p className="text-red-500 text-xs italic">Campo obrigatório</p>}
-                    </div>
-                    <div>
                         <label htmlFor="criticidade" className="block text-gray-700 font-bold items-center">
                             Crítica:
                         </label>
