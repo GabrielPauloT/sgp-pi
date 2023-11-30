@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { FileInput } from "../fileInput";
 
 type FormData = {
     id: string;
@@ -332,6 +333,9 @@ export default function FormStoppage() {
                         />
                         {errors.apontamento && <p className="text-red-500 text-xs italic">Campo obrigatório</p>}
                     </div>
+                    <div className=" relative w-full flex-col shadow-lg mb-6 mt-4">
+                        <FileInput />
+                    </div>
                 </div>
                 <div className="flex items-center justify-end gap-4 mr-10">
                     <button
@@ -346,6 +350,9 @@ export default function FormStoppage() {
                     >
                         Enviar
                     </button>
+                    <>
+
+                    </>
                 </div>
             </form>
         </div>
